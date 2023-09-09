@@ -1,0 +1,64 @@
+<app-search></app-search>
+<div class="container"><br>
+    <div class="row hidden-md-up">
+        <div class="col-md-3 card-container" *ngFor="let item of character | filter:filter | filterStatus:filterStatus">
+            <div class="card " data-toggle="modal" data-target="#testModal" (click)="openModal(item.id)">
+                <img src="{{item.image}}" class="card-img-top" alt="...">
+                <div class="card__info">
+                    <h4 class="card-title">{{item.name}}</h4>
+                    <div class="status {{item.status}}">
+                        {{item.status}}
+                    </div>
+                    <button type="text" class="episodes" [routerLink]="['/character/episode',item.id]" >See number of episodes: <strong>{{item.episode.length}}</strong></button>
+                    <div class="modal fade  " id="testModal" #testModal tabindex="-1" role="dialog"
+                        aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+                        <div class="modal-dialog modal-dialog-centered" role="document">
+                            <div class="modal-content modls">
+                                <div class="modal-header">
+                                  <h2 class="card-title">{{characters.name}}</h2>
+                                </div>
+                                <div class="modal-body ">
+                                    <img src="{{characters.image}}" class="card-img-top  imagen" alt="...">
+                                    <p>Name: <strong>{{characters?.name}}</strong></p>
+                                    <p>Status: <strong>{{characters?.status}}</strong></p>
+                                    <p>Species: <strong>{{characters?.species}}</strong></p>
+                                    <p>Type: <strong>{{characters?.type}} </strong></p>
+                                    <p>Gender: <strong>{{characters?.gender}} </strong></p>
+                                    <p>Origin: <strong>{{characters?.origin?.name}} </strong></p>
+                                    <p>Location: <strong>{{characters?.location?.name}}</strong></p>
+                                </div>
+                                <div class="modal-footer">
+                                    <button type="button" class="btn btn-secondary"
+                                        data-bs-dismiss="modal">Close</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <br>
+        </div>
+    </div>
+    <nav aria-label="Page navigation example">
+      <ul class="pagination">
+        <li class="page-item">
+          <a class="page-link" href="#" aria-label="Previous">
+            <span aria-hidden="true">&laquo;</span>
+            <span class="sr-only" (click)="prevpage()">Previous</span>
+          </a>
+        </li>
+        <li class="page-item" *ngFor="let item of arrayPages ">
+          <button class="page-link" (click)="updatepage(item)">{{item}}</button>
+        </li>
+
+        <li class="page-item">
+          <a class="page-link" href="#" aria-label="Next">
+            <span aria-hidden="true">&raquo;</span>
+            <span class="sr-only" (click)="nextpage()">Next</span>
+          </a>
+        </li>
+      </ul>
+    </nav>
+
+  
+</div>

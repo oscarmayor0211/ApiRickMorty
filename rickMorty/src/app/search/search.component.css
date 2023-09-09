@@ -1,0 +1,46 @@
+.search {
+  width: 622px;
+  margin: 3rem auto 0;
+  max-width: 650px;
+  margin-top: 0px;
+  justify-content: space-between;
+  padding: 10px;
+  color: #fff;
+  border-radius: 40px;
+  background-color: var(--background-card);
+  
+}
+
+.search input {
+    height: 40px;
+    width: 400px;
+    border: none;
+
+
+
+    margin: none;
+
+    background-color: var(--background-card);
+    color: #fff;
+    font-size: 20px;
+}
+
+.search i {
+  font-size: 25px;
+  color: white;
+}
+
+.no-outline {
+  outline: none;
+  padding: 10px;
+  width: 60%; 
+}
+
+
+  
+  
+  .brand{
+    margin-top: 0;
+    color: #fff;
+  }
+ 

@@ -1,0 +1,26 @@
+.search {
+    margin: 3rem auto 0;
+    max-width: 650px;
+    margin-top: 40px;
+    padding: 10px;
+    color: #fff;
+    border-radius: 40px;
+  }
+  
+  button {
+    font-weight: bold;
+    border: none;
+  }
+  
+ .buttn {
+  color: #fff;
+  margin-top: -37px;
+ } 
+ .logo{
+  margin-top: -37px;
+  width: 40px;
+
+}
+
+  
+ 
